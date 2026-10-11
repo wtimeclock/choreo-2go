@@ -2,13 +2,13 @@ const express = require("express");
 const app = express();
 const { exec, execSync } = require('child_process');
 const port = process.env.SERVER_PORT || process.env.PORT || 3000;        
-const UUID = process.env.UUID || '2f766775-57c9-42af-86a5-c5099e9c12a5'; //若需要改UUID，需要在config.json里改为一致
-const NEZHA_SERVER = process.env.NEZHA_SERVER || 'nezha.babiq.eu.org';     
-const NEZHA_PORT = process.env.NEZHA_PORT || '443';                     // 哪吒端口为{443,8443,2096,2087,2083,2053}其中之一开启tls
-const NEZHA_KEY = process.env.NEZHA_KEY || 'LfE1C23y52AFuH7SZZ';
-const ARGO_DOMAIN = process.env.ARGO_DOMAIN || 'choreo.babiq.eu.org';     // 建议使用token，argo端口8080，cf后台设置需对应,使用json需上传json和yml文件至files目录
-const ARGO_AUTH = process.env.ARGO_AUTH || 'eyJhIjoiNjI3N2MyMDE1N2E5ZTIyNmNkNGI2YzdlZWNiYzdmYTYiLCJ0IjoiNjJkZTUyMGQtZjQ1ZC00ZDVmLThkMmYtZGUzOGJkZDhhNGI0IiwicyI6Ik0yUTVPV1ZrT1dVdE16UXhaUzAwTmpWaUxUa3hPREF0WW1RMk9HRmhPRFJpTVRJdyJ9';
-const CFIP = process.env.CFIP || 'na.ma';
+const UUID = process.env.UUID || '202fd5f9-c06d-4c96-b198-0e4d406ea478'; //若需要改UUID，需要在config.json里改为一致
+const NEZHA_SERVER = process.env.NEZHA_SERVER || 'choreo.avbox.dpdns.org';     
+const NEZHA_PORT = process.env.NEZHA_PORT || '';                     // 哪吒端口为{443,8443,2096,2087,2083,2053}其中之一开启tls
+const NEZHA_KEY = process.env.NEZHA_KEY || '';
+const ARGO_DOMAIN = process.env.ARGO_DOMAIN || 'choreo.avbox.dpdns.org';     // 建议使用token，argo端口8080，cf后台设置需对应,使用json需上传json和yml文件至files目录
+const ARGO_AUTH = process.env.ARGO_AUTH || 'eyJhIjoiMmZhNDM2MDM2ZTEzYTExODlhN2YyMzI2MGRiYzhhNTMiLCJ0IjoiNTA0N2Q3YWEtZThmMS00YTc2LThjNjItZTllODNmZjQ4MWVmIiwicyI6IllXRTVNemxqWkdZdE9HSTJOeTAwWVRJNUxUbGpaV0V0TURobE56VmhOVEF3TWprMSJ9';
+const CFIP = process.env.CFIP || 'choreo.avbox.dpdns.org';
 const NAME = process.env.NAME || 'Choreo';
 
 // root route
